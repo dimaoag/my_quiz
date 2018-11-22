@@ -3548,4 +3548,12 @@ button.swiper-pagination-bullet{border:none;margin:0;padding:0;box-shadow:none;-
     height: 1500px!important;
 }
 
-input[type='checkbox']
+.answer-variants__textVariant_selected {
+    border: solid 1px var(--color-alpha);
+    box-shadow: 1.7px 5.8px 21px 0 rgba(0,0,0,.07);
+}
+@media all and (max-width: 380px){
+    .swiper-container .answer-images__answerContainer{
+        text-align: center;
+    }
+}

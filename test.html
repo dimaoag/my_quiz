@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="//cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css">
     <!--<link rel="stylesheet" href="css/bootstrap.css">-->
     <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/app.css">
 
 
@@ -16,462 +17,591 @@
 <body>
 
 
-    <button data-mfp-src="#quiz-popup" class="open-popup-link">Show inline popup</button>
+<button data-mfp-src="#quiz-popup" class="open-popup-link">Show inline popup</button>
 
-    <div id="quiz-popup" class="white-popup mfp-hide quiz-in-popup">
-        <div id="app" class="app">
-            <div class="layout">
-                <form action="#" class="" method="post">
-                    <div class="quiz">
-                        <ul id="slides">
-                            <li class="slide showing">
-                                <div class="quiz__questions">
-                                    <div class="quiz__questions-header">
-                                        <h3 class="quiz__title">
-                                            <svg data-v-34d1be05="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.141 16.597" class="quiz__title-icon"><g data-v-34d1be05="" id="check-form_1_" data-name="check-form (1)" transform="translate(-5.963)"><path data-v-34d1be05="" id="Path_12" d="M18.438 8.8V1.337H7.3V15.26h5.124a.668.668 0 0 1 0 1.337H6.631a.67.67 0 0 1-.668-.668V.668A.67.67 0 0 1 6.631 0h12.476a.67.67 0 0 1 .668.668V8.8a.668.668 0 1 1-1.337 0zm3.442 1.626a.67.67 0 0 0-.947.056l-3.665 4.077-1.838-1.771a.67.67 0 0 0-.925.969l2.339 2.25a.657.657 0 0 0 .468.189h.022a.668.668 0 0 0 .468-.223l4.121-4.589a.672.672 0 0 0-.043-.958zM15.988 3.9H9.973a.668.668 0 1 0 0 1.337h6.015a.668.668 0 1 0 0-1.337zm.668 4.344a.67.67 0 0 0-.668-.668H9.973a.668.668 0 0 0 0 1.337h6.015a.67.67 0 0 0 .668-.67zm-6.683 2.9a.668.668 0 0 0 0 1.337h1.782a.668.668 0 0 0 0-1.337z" data-name="Path 12" class="cls-1"></path></g></svg>
-                                            Ответьте на 5 вопросов и получите предложение о работе в интернете
-                                        </h3>
-                                        <hr class="quiz__title-separator">
-                                        <div class="title quiz__question-title">Сколько времени в день вы можете приделять удаленной работе?<br>
-                                            <div class="quiz__tags"></div>
-                                        </div>
-                                        <div class="progress-bar quiz__progress">
-                                            <div class="progress-bar__label">Готово:<span></span></div>
-                                            <div class="progress-bar__field"><span></span></div>
-                                        </div>
+<div id="quiz-popup" class="white-popup mfp-hide quiz-in-popup">
+    <div id="app" class="app">
+        <div class="layout">
+            <form action="#" class="" method="post">
+                <div class="quiz">
+                    <ul id="slides">
+                        <li class="slide showing">
+                            <div class="quiz__questions">
+                                <div class="quiz__questions-header">
+                                    <h3 class="quiz__title">
+                                        <svg data-v-34d1be05="" xmlns="http://www.w3.org/2000/svg"
+                                             viewBox="0 0 16.141 16.597" class="quiz__title-icon">
+                                            <g data-v-34d1be05="" id="check-form_1_" data-name="check-form (1)"
+                                               transform="translate(-5.963)">
+                                                <path data-v-34d1be05="" id="Path_12"
+                                                      d="M18.438 8.8V1.337H7.3V15.26h5.124a.668.668 0 0 1 0 1.337H6.631a.67.67 0 0 1-.668-.668V.668A.67.67 0 0 1 6.631 0h12.476a.67.67 0 0 1 .668.668V8.8a.668.668 0 1 1-1.337 0zm3.442 1.626a.67.67 0 0 0-.947.056l-3.665 4.077-1.838-1.771a.67.67 0 0 0-.925.969l2.339 2.25a.657.657 0 0 0 .468.189h.022a.668.668 0 0 0 .468-.223l4.121-4.589a.672.672 0 0 0-.043-.958zM15.988 3.9H9.973a.668.668 0 1 0 0 1.337h6.015a.668.668 0 1 0 0-1.337zm.668 4.344a.67.67 0 0 0-.668-.668H9.973a.668.668 0 0 0 0 1.337h6.015a.67.67 0 0 0 .668-.67zm-6.683 2.9a.668.668 0 0 0 0 1.337h1.782a.668.668 0 0 0 0-1.337z"
+                                                      data-name="Path 12" class="cls-1"></path>
+                                            </g>
+                                        </svg>
+                                        Ответьте на 5 вопросов и получите предложение о работе в интернете
+                                    </h3>
+                                    <hr class="quiz__title-separator">
+                                    <div class="title quiz__question-title">Сколько времени в день вы можете приделять
+                                        удаленной работе?<br>
+                                        <div class="quiz__tags"></div>
                                     </div>
-                                    <div class="question quiz__question question_variants">
-                                        <div class="answer-variants">
-                                            <div class="answer-variants__group" id="variant_group_0">
-                                                <div class="answer-variants__textVariant" id="variant_0_0">
-                                                    <label tabindex="0" class="b-checkbox checkbox">
-                                                        <input type="checkbox" value="1-3 часов" name="raz[]" onclick="diss('.btn0', 'variant_group_0', 'variant_0_0')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
+                                    <div class="progress-bar quiz__progress">
+                                        <div class="progress-bar__label">Готово:<span></span></div>
+                                        <div class="progress-bar__field"><span></span></div>
+                                    </div>
+                                </div>
+                                <div class="question quiz__question question_variants">
+                                    <div class="answer-variants">
+                                        <div class="answer-variants__group" id="variant_group_0">
+                                            <div class="answer-variants__textVariant" id="variant_0_0">
+                                                <label tabindex="0" class="b-checkbox checkbox">
+                                                    <input type="checkbox" value="1-3 часов" name="raz[]"
+                                                           onclick="diss('.btn0', 'variant_group_0', 'variant_0_0')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
                                                         <div class="answer">
                                                             <div class="answer__title">1-3 часов</div>
                                                         </div>
                                                     </span>
-                                                    </label>
-                                                </div>
-                                                <div class="answer-variants__textVariant" id="variant_0_1">
-                                                    <label tabindex="0" class="b-checkbox checkbox">
-                                                        <input type="checkbox" name="raz[]" value="3-5 часов" onclick="diss('.btn0', 'variant_group_0', 'variant_0_1')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
+                                                </label>
+                                            </div>
+                                            <div class="answer-variants__textVariant" id="variant_0_1">
+                                                <label tabindex="0" class="b-checkbox checkbox">
+                                                    <input type="checkbox" name="raz[]" value="3-5 часов"
+                                                           onclick="diss('.btn0', 'variant_group_0', 'variant_0_1')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
                                                         <div class="answer">
                                                             <div class="answer__title">3-5 часов</div>
                                                         </div>
                                                     </span>
-                                                    </label>
-                                                </div>
-                                                <div class="answer-variants__textVariant" id="variant_0_2">
-                                                    <label tabindex="0" class="b-checkbox checkbox">
-                                                        <input type="checkbox" name="raz[]" value="5-8 часов" onclick="diss('.btn0', 'variant_group_0', 'variant_0_2')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
+                                                </label>
+                                            </div>
+                                            <div class="answer-variants__textVariant" id="variant_0_2">
+                                                <label tabindex="0" class="b-checkbox checkbox">
+                                                    <input type="checkbox" name="raz[]" value="5-8 часов"
+                                                           onclick="diss('.btn0', 'variant_group_0', 'variant_0_2')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
                                                         <div class="answer">
                                                             <div class="answer__title">5-8 часов</div>
                                                         </div>
                                                     </span>
-                                                    </label>
-                                                </div>
-                                                <div class="answer-variants__textVariant" id="variant_0_3">
-                                                    <label tabindex="0" class="b-checkbox checkbox">
-                                                        <input type="checkbox" value="8-11 часов" name="raz[]" onclick="diss('.btn0', 'variant_group_0', 'variant_0_3')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
+                                                </label>
+                                            </div>
+                                            <div class="answer-variants__textVariant" id="variant_0_3">
+                                                <label tabindex="0" class="b-checkbox checkbox">
+                                                    <input type="checkbox" value="8-11 часов" name="raz[]"
+                                                           onclick="diss('.btn0', 'variant_group_0', 'variant_0_3')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
                                                             <div class="answer">
                                                                 <div class="answer__title">8-11 часов</div>
                                                             </div>
                                                         </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="quiz__buttons">
-                                        <div class="quiz-buttons">
-                                            <div class="progress-bar progress-bar_mobile">
-                                                <div class="progress-bar__label">Готово:<span></span></div>
-                                                <div class="progress-bar__field"><span></span></div>
-                                            </div>
-                                            <div class="button is-pulled-left is-link quiz-buttons__button quiz-buttons__button_prev " disabled="disabled" >
-                                                <div class="quiz-buttons__arrow">
-                                                    <svg data-v-d80b7794="" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class="is-back"><path data-v-d80b7794="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
-                                                </div>
-                                                <span class="quiz-buttons__button_prev_text">Назад</span>
-                                            </div>
-                                            <div class="button is-pulled-right quiz-buttons__button quiz-buttons__button_next is-blicked btn0" disabled="disabled" data-disabled="disabled" onclick="nextSlide(0)">
-                                                <div class="quiz-buttons__icon">
-                                                    <svg data-v-e31301d4="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><g data-v-e31301d4=""><path data-v-e31301d4="" d="M468.907,214.604c-11.423,0-20.682,9.26-20.682,20.682v20.831c-0.031,54.338-21.221,105.412-59.666,143.812c-38.417,38.372-89.467,59.5-143.761,59.5c-0.04,0-0.08,0-0.12,0C132.506,459.365,41.3,368.056,41.364,255.883c0.031-54.337,21.221-105.411,59.667-143.813c38.417-38.372,89.468-59.5,143.761-59.5c0.04,0,0.08,0,0.12,0c28.672,0.016,56.49,5.942,82.68,17.611c10.436,4.65,22.659-0.041,27.309-10.474c4.648-10.433-0.04-22.659-10.474-27.309c-31.516-14.043-64.989-21.173-99.492-21.192c-0.052,0-0.092,0-0.144,0c-65.329,0-126.767,25.428-172.993,71.6C25.536,129.014,0.038,190.473,0,255.861c-0.037,65.386,25.389,126.874,71.599,173.136c46.21,46.262,107.668,71.76,173.055,71.798c0.051,0,0.092,0,0.144,0c65.329,0,126.767-25.427,172.993-71.6c46.262-46.209,71.76-107.668,71.798-173.066v-20.842C489.589,223.864,480.33,214.604,468.907,214.604z"></path></g><g data-v-e31301d4=""><path data-v-e31301d4=""d="M505.942,39.803c-8.077-8.076-21.172-8.076-29.249,0L244.794,271.701l-52.609-52.609c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.077-8.077,21.172,0,29.249l67.234,67.234c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.586-2.019,14.625-6.058L505.942,69.052C514.019,60.975,514.019,47.88,505.942,39.803z"></path></g></svg>
-                                                </div>
-                                                <span>Далее</span>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="slide">
-                                <div class="quiz__questions">
-                                    <div class="quiz__questions-header">
-                                        <h3 class="quiz__title">
-                                            <svg data-v-34d1be05="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.141 16.597" class="quiz__title-icon"><g data-v-34d1be05="" id="check-form_1_" data-name="check-form (1)" transform="translate(-5.963)"><path data-v-34d1be05="" id="Path_12" d="M18.438 8.8V1.337H7.3V15.26h5.124a.668.668 0 0 1 0 1.337H6.631a.67.67 0 0 1-.668-.668V.668A.67.67 0 0 1 6.631 0h12.476a.67.67 0 0 1 .668.668V8.8a.668.668 0 1 1-1.337 0zm3.442 1.626a.67.67 0 0 0-.947.056l-3.665 4.077-1.838-1.771a.67.67 0 0 0-.925.969l2.339 2.25a.657.657 0 0 0 .468.189h.022a.668.668 0 0 0 .468-.223l4.121-4.589a.672.672 0 0 0-.043-.958zM15.988 3.9H9.973a.668.668 0 1 0 0 1.337h6.015a.668.668 0 1 0 0-1.337zm.668 4.344a.67.67 0 0 0-.668-.668H9.973a.668.668 0 0 0 0 1.337h6.015a.67.67 0 0 0 .668-.67zm-6.683 2.9a.668.668 0 0 0 0 1.337h1.782a.668.668 0 0 0 0-1.337z" data-name="Path 12" class="cls-1"></path></g></svg>
-                                            Ответьте на 5 вопросов и получите предложение о работе в интернете
-                                        </h3>
-                                        <hr class="quiz__title-separator">
-                                        <div class="title quiz__question-title">Какой доход вы хотите получать?<br>
-                                            <div class="quiz__tags"></div>
-                                        </div>
-                                        <div class="progress-bar quiz__progress">
+                                <div class="quiz__buttons">
+                                    <div class="quiz-buttons">
+                                        <div class="progress-bar progress-bar_mobile">
                                             <div class="progress-bar__label">Готово:<span></span></div>
                                             <div class="progress-bar__field"><span></span></div>
                                         </div>
-                                    </div>
-                                    <div class="question quiz__question question_variants">
-                                        <div class="answer-variants">
-                                            <div class="answer-variants__group" id="variant_group_1">
-                                                <div class="answer-variants__textVariant" id="variant_1_0">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="20-30 тыс / мес" name="two" onclick="diss('.btn1', 'variant_group_1', 'variant_1_0')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
-                                                        <div class="answer">
-                                                            <div class="answer__title">20-30 тыс / мес</div>
-                                                        </div>
-                                                    </span>
-                                                    </label>
-                                                </div>
-                                                <div class="answer-variants__textVariant" id="variant_1_1">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="30-50 тыс / мес" name="two" onclick="diss('.btn1', 'variant_group_1', 'variant_1_1')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
-                                                        <div class="answer">
-                                                            <div class="answer__title">30-50 тыс / мес</div>
-                                                        </div>
-                                                    </span>
-                                                    </label>
-                                                </div>
-                                                <div class="answer-variants__textVariant" id="variant_1_2">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="50-100 тыс / мес" name="two" onclick="diss('.btn1', 'variant_group_1', 'variant_1_2')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
-                                                        <div class="answer">
-                                                            <div class="answer__title">50-100 тыс / мес</div>
-                                                        </div>
-                                                    </span>
-                                                    </label>
-                                                </div>
-                                                <div class="answer-variants__textVariant" id="variant_1_3">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="от 100 тыс / мес" name="two" onclick="diss('.btn1', 'variant_group_1', 'variant_1_3')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
-                                                        <div class="answer">
-                                                            <div class="answer__title">от 100 тыс / мес</div>
-                                                        </div>
-                                                    </span>
-                                                    </label>
-                                                </div>
+                                        <div class="button is-pulled-left is-link quiz-buttons__button quiz-buttons__button_prev "
+                                             disabled="disabled">
+                                            <div class="quiz-buttons__arrow">
+                                                <svg data-v-d80b7794="" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class="is-back"><path data-v-d80b7794="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
                                             </div>
+                                            <span class="quiz-buttons__button_prev_text">Назад</span>
+                                        </div>
+                                        <div class="button is-pulled-right quiz-buttons__button quiz-buttons__button_next is-blicked btn0" disabled="disabled" data-disabled="disabled" onclick="nextSlide(0)">
+                                            <div class="quiz-buttons__icon">
+                                                <svg data-v-e31301d4="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><g data-v-e31301d4=""><path data-v-e31301d4="" d="M468.907,214.604c-11.423,0-20.682,9.26-20.682,20.682v20.831c-0.031,54.338-21.221,105.412-59.666,143.812c-38.417,38.372-89.467,59.5-143.761,59.5c-0.04,0-0.08,0-0.12,0C132.506,459.365,41.3,368.056,41.364,255.883c0.031-54.337,21.221-105.411,59.667-143.813c38.417-38.372,89.468-59.5,143.761-59.5c0.04,0,0.08,0,0.12,0c28.672,0.016,56.49,5.942,82.68,17.611c10.436,4.65,22.659-0.041,27.309-10.474c4.648-10.433-0.04-22.659-10.474-27.309c-31.516-14.043-64.989-21.173-99.492-21.192c-0.052,0-0.092,0-0.144,0c-65.329,0-126.767,25.428-172.993,71.6C25.536,129.014,0.038,190.473,0,255.861c-0.037,65.386,25.389,126.874,71.599,173.136c46.21,46.262,107.668,71.76,173.055,71.798c0.051,0,0.092,0,0.144,0c65.329,0,126.767-25.427,172.993-71.6c46.262-46.209,71.76-107.668,71.798-173.066v-20.842C489.589,223.864,480.33,214.604,468.907,214.604z"></path></g><g data-v-e31301d4=""><path data-v-e31301d4=""d="M505.942,39.803c-8.077-8.076-21.172-8.076-29.249,0L244.794,271.701l-52.609-52.609c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.077-8.077,21.172,0,29.249l67.234,67.234c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.586-2.019,14.625-6.058L505.942,69.052C514.019,60.975,514.019,47.88,505.942,39.803z"></path></g></svg>
+                                            </div>
+                                            <span>Далее</span>
                                         </div>
                                     </div>
-                                    <div class="quiz__buttons">
-                                        <div class="quiz-buttons">
-                                            <div class="progress-bar progress-bar_mobile">
-                                                <div class="progress-bar__label">Готово:<span></span></div>
-                                                <div class="progress-bar__field"><span></span></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="quiz__questions">
+                                <div class="quiz__questions-header">
+                                    <h3 class="quiz__title">
+                                        <svg data-v-34d1be05="" xmlns="http://www.w3.org/2000/svg"
+                                             viewBox="0 0 16.141 16.597" class="quiz__title-icon">
+                                            <g data-v-34d1be05="" id="check-form_1_" data-name="check-form (1)"
+                                               transform="translate(-5.963)">
+                                                <path data-v-34d1be05="" id="Path_12" d="M18.438 8.8V1.337H7.3V15.26h5.124a.668.668 0 0 1 0 1.337H6.631a.67.67 0 0 1-.668-.668V.668A.67.67 0 0 1 6.631 0h12.476a.67.67 0 0 1 .668.668V8.8a.668.668 0 1 1-1.337 0zm3.442 1.626a.67.67 0 0 0-.947.056l-3.665 4.077-1.838-1.771a.67.67 0 0 0-.925.969l2.339 2.25a.657.657 0 0 0 .468.189h.022a.668.668 0 0 0 .468-.223l4.121-4.589a.672.672 0 0 0-.043-.958zM15.988 3.9H9.973a.668.668 0 1 0 0 1.337h6.015a.668.668 0 1 0 0-1.337zm.668 4.344a.67.67 0 0 0-.668-.668H9.973a.668.668 0 0 0 0 1.337h6.015a.67.67 0 0 0 .668-.67zm-6.683 2.9a.668.668 0 0 0 0 1.337h1.782a.668.668 0 0 0 0-1.337z"
+                                                      data-name="Path 12" class="cls-1"></path>
+                                            </g>
+                                        </svg>
+                                        Ответьте на 5 вопросов и получите предложение о работе в интернете
+                                    </h3>
+                                    <hr class="quiz__title-separator">
+                                    <div class="title quiz__question-title">Какой доход вы хотите получать?<br>
+                                        <div class="quiz__tags"></div>
+                                    </div>
+                                    <div class="progress-bar quiz__progress">
+                                        <div class="progress-bar__label">Готово:<span></span></div>
+                                        <div class="progress-bar__field"><span></span></div>
+                                    </div>
+                                </div>
+                                <div class="question quiz__question question_one-image" id="variant_group_1">
+                                    <div class="answer-one-image">
+                                        <div class="answer-one-image__group">
+                                            <div class="answer-variants__textVariant answer-one-image__textVariant" id="variant_1_0" data-img="img" data-src="http://res.cloudinary.com/hgwipn3sa/image/upload/w_380,h_307,c_fill,dpr_1.0,f_auto/karxneet0odobgasrrwe.jpg">
+                                                <label tabindex="0" class="b-radio radio">
+                                                    <input type="radio" name="img" value="Классика" onclick="diss('.btn1', 'variant_group_1', 'variant_1_0')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
+                                                        <div class="answer">
+                                                            <div class="answer__title">Классика</div>
+                                                        </div>
+                                                    </span>
+                                                </label>
                                             </div>
-                                            <div class="button is-pulled-left is-link quiz-buttons__button quiz-buttons__button_prev" onclick="prewSlide(1)" ;>
-                                                <div class="quiz-buttons__arrow">
-                                                    <svg data-v-d80b7794="" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class="is-back"><path data-v-d80b7794="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
+                                            <div class="answer-variants__textVariant answer-one-image__textVariant" id="variant_1_1" data-img="img" data-src="http://res.cloudinary.com/hgwipn3sa/image/upload/w_380,h_307,c_fill,dpr_1.0,f_auto/gngpqoc64vaizeb5nbdm.jpg">
+                                                <label tabindex="0" class="b-radio radio">
+                                                    <input type="radio" name="img" value="Лофт" onclick="diss('.btn1', 'variant_group_1', 'variant_1_1')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
+                                                        <div class="answer">
+                                                            <div class="answer__title">Лофт</div>
+                                                        </div>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="answer-variants__textVariant answer-one-image__textVariant" id="variant_1_2" data-img="img" data-src="http://res.cloudinary.com/hgwipn3sa/image/upload/w_380,h_307,c_fill,dpr_1.0,f_auto/g3mlalauek5ebetirlc0.jpg">
+                                                <label tabindex="0" class="b-radio radio">
+                                                    <input type="radio" name="img" value="Модерн" onclick="diss('.btn1', 'variant_group_1', 'variant_1_2')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
+                                                        <div class="answer">
+                                                            <div class="answer__title">Модерн</div>
+                                                        </div>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                            <div class="answer-variants__textVariant answer-one-image__textVariant" id="variant_1_3" data-img="img" data-src="http://res.cloudinary.com/hgwipn3sa/image/upload/w_380,h_307,c_fill,dpr_1.0,f_auto/yeca12algzsw3aerk7ik.jpg">
+                                                <label tabindex="0" class="b-radio radio">
+                                                    <input type="radio" name="img" value="Прованс" onclick="diss('.btn1', 'variant_group_1', 'variant_1_3')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
+                                                        <div class="answer">
+                                                            <div class="answer__title">Прованс</div>
+                                                        </div>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="answer-one-image__image">
+                                            <img src="http://res.cloudinary.com/hgwipn3sa/image/upload/w_380,h_307,c_fill,dpr_1.0,f_auto/karxneet0odobgasrrwe.jpg" class="answer-image__img">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="quiz__buttons">
+                                    <div class="quiz-buttons">
+                                        <div class="progress-bar progress-bar_mobile">
+                                            <div class="progress-bar__label">Готово:<span></span></div>
+                                            <div class="progress-bar__field"><span></span></div>
+                                        </div>
+                                        <div class="button is-pulled-left is-link quiz-buttons__button quiz-buttons__button_prev" onclick="prewSlide(1);">
+                                            <div class="quiz-buttons__arrow">
+                                                <svg data-v-d80b7794="" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class="is-back"><path data-v-d80b7794="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
+                                            </div>
+                                            <span class="quiz-buttons__button_prev_text">Назад</span></div>
+                                        <div class="button is-pulled-right quiz-buttons__button quiz-buttons__button_next btn1" onclick="nextSlide(1)">
+                                            <div class="quiz-buttons__icon">
+                                                <svg data-v-e31301d4="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><g data-v-e31301d4=""><path data-v-e31301d4="" d="M468.907,214.604c-11.423,0-20.682,9.26-20.682,20.682v20.831c-0.031,54.338-21.221,105.412-59.666,143.812c-38.417,38.372-89.467,59.5-143.761,59.5c-0.04,0-0.08,0-0.12,0C132.506,459.365,41.3,368.056,41.364,255.883c0.031-54.337,21.221-105.411,59.667-143.813c38.417-38.372,89.468-59.5,143.761-59.5c0.04,0,0.08,0,0.12,0c28.672,0.016,56.49,5.942,82.68,17.611c10.436,4.65,22.659-0.041,27.309-10.474c4.648-10.433-0.04-22.659-10.474-27.309c-31.516-14.043-64.989-21.173-99.492-21.192c-0.052,0-0.092,0-0.144,0c-65.329,0-126.767,25.428-172.993,71.6C25.536,129.014,0.038,190.473,0,255.861c-0.037,65.386,25.389,126.874,71.599,173.136c46.21,46.262,107.668,71.76,173.055,71.798c0.051,0,0.092,0,0.144,0c65.329,0,126.767-25.427,172.993-71.6c46.262-46.209,71.76-107.668,71.798-173.066v-20.842C489.589,223.864,480.33,214.604,468.907,214.604z"></path></g><g data-v-e31301d4=""><path data-v-e31301d4="" d="M505.942,39.803c-8.077-8.076-21.172-8.076-29.249,0L244.794,271.701l-52.609-52.609c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.077-8.077,21.172,0,29.249l67.234,67.234c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.586-2.019,14.625-6.058L505.942,69.052C514.019,60.975,514.019,47.88,505.942,39.803z"></path></g></svg>
+                                            </div>
+                                            <span>Далее</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="quiz__questions">
+                                <div class="quiz__questions-header">
+                                    <h3 class="quiz__title">
+                                        <svg data-v-34d1be05="" xmlns="http://www.w3.org/2000/svg"
+                                             viewBox="0 0 16.141 16.597" class="quiz__title-icon">
+                                            <g data-v-34d1be05="" id="check-form_1_" data-name="check-form (1)"
+                                               transform="translate(-5.963)">
+                                                <path data-v-34d1be05="" id="Path_12"
+                                                      d="M18.438 8.8V1.337H7.3V15.26h5.124a.668.668 0 0 1 0 1.337H6.631a.67.67 0 0 1-.668-.668V.668A.67.67 0 0 1 6.631 0h12.476a.67.67 0 0 1 .668.668V8.8a.668.668 0 1 1-1.337 0zm3.442 1.626a.67.67 0 0 0-.947.056l-3.665 4.077-1.838-1.771a.67.67 0 0 0-.925.969l2.339 2.25a.657.657 0 0 0 .468.189h.022a.668.668 0 0 0 .468-.223l4.121-4.589a.672.672 0 0 0-.043-.958zM15.988 3.9H9.973a.668.668 0 1 0 0 1.337h6.015a.668.668 0 1 0 0-1.337zm.668 4.344a.67.67 0 0 0-.668-.668H9.973a.668.668 0 0 0 0 1.337h6.015a.67.67 0 0 0 .668-.67zm-6.683 2.9a.668.668 0 0 0 0 1.337h1.782a.668.668 0 0 0 0-1.337z"
+                                                      data-name="Path 12" class="cls-1"></path>
+                                            </g>
+                                        </svg>
+                                        Ответьте на 5 вопросов и получите предложение о работе в интернете
+                                    </h3>
+                                    <hr class="quiz__title-separator">
+                                    <div class="title quiz__question-title">Вы ищете работу с вложением или без
+                                        вложений?<br>
+                                        <div class="quiz__tags"></div>
+                                    </div>
+                                    <div class="progress-bar quiz__progress">
+                                        <div class="progress-bar__label">Готово:<span></span></div>
+                                        <div class="progress-bar__field"><span></span></div>
+                                    </div>
+                                </div>
+                                <div class="question quiz__question question_images">
+                                    <div class="answer-images">
+                                        <div class="answer-images__group">
+                                            <div class="swiper-container swiper-container-horizontal sw-wrap">
+                                                <div class="swiper-wrapper">
+                                                    <div class="swiper-slide">
+                                                        <div class="answer-images__answerContainer">
+                                                            <label tabindex="0" class="b-radio radio">
+                                                                <input type="radio" value="Классика">
+                                                                <span class="check"></span>
+                                                                <span class="control-label">
+                                                                    <div class="answer-image answer-image_type_vertical answer-image_checked">
+                                                                        <img src="http://res.cloudinary.com/hgwipn3sa/image/upload/dpr_1.0,f_auto,w_180,h_240,q_100,c_fill/h6chifgekgjunsqos2zr.jpg" class="answer-image__img">
+                                                                        <div class="answer-image__title">Классика</div>
+                                                                    </div>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="answer-images__answerContainer">
+                                                            <label tabindex="0" class="b-radio radio">
+                                                                <input type="radio" value="Раздвижные">
+                                                                <span class="check"></span>
+                                                                <span class="control-label">
+                                                                    <div class="answer-image answer-image_type_vertical">
+                                                                        <img src="http://res.cloudinary.com/hgwipn3sa/image/upload/dpr_1.0,f_auto,w_180,h_240,q_100,c_fill/ynoz4btiwrfbom5nyr0z.jpg" class="answer-image__img">
+                                                                        <div class="answer-image__title">Раздвижные</div>
+                                                                    </div>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="answer-images__answerContainer">
+                                                            <label tabindex="0" class="b-radio radio">
+                                                                <input type="radio" value="Расспашные">
+                                                                <span class="check"></span>
+                                                                <span class="control-label">
+                                                                    <div class="answer-image answer-image_type_vertical">
+                                                                        <img src="http://res.cloudinary.com/hgwipn3sa/image/upload/dpr_1.0,f_auto,w_180,h_240,q_100,c_fill/dsybjenfbwqygjd7ems0.jpg" class="answer-image__img">
+                                                                        <div class="answer-image__title">Расспашные</div>
+                                                                    </div>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="answer-images__answerContainer">
+                                                            <label tabindex="0" class="b-radio radio">
+                                                                <input type="radio" value="Скрытые">
+                                                                <span class="check"></span>
+                                                                <span class="control-label">
+                                                                    <div class="answer-image answer-image_type_vertical">
+                                                                        <img src="http://res.cloudinary.com/hgwipn3sa/image/upload/dpr_1.0,f_auto,w_180,h_240,q_100,c_fill/uky3pjl0svd4tzmxdyki.jpg" class="answer-image__img">
+                                                                        <div class="answer-image__title">Скрытые</div>
+                                                                    </div>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="swiper-slide">
+                                                        <div class="answer-images__answerContainer">
+                                                            <label tabindex="0" class="b-radio radio">
+                                                                <input type="radio" value="Гармошкой">
+                                                                <span class="check"></span>
+                                                                <span class="control-label">
+                                                                    <div class="answer-image answer-image_type_vertical">
+                                                                        <img src="http://res.cloudinary.com/hgwipn3sa/image/upload/dpr_1.0,f_auto,w_180,h_240,q_100,c_fill/fcr91zweyqdeixs3onrj.jpg" class="answer-image__img">
+                                                                        <div class="answer-image__title">Гармошкой</div>
+                                                                    </div>
+                                                                </span>
+                                                            </label>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <span class="quiz-buttons__button_prev_text">Назад</span></div>
-                                            <div class="button is-pulled-right quiz-buttons__button quiz-buttons__button_next btn1" onclick="nextSlide(1)">
-                                                <div class="quiz-buttons__icon">
-                                                    <svg data-v-e31301d4="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><g data-v-e31301d4=""><path data-v-e31301d4="" d="M468.907,214.604c-11.423,0-20.682,9.26-20.682,20.682v20.831c-0.031,54.338-21.221,105.412-59.666,143.812c-38.417,38.372-89.467,59.5-143.761,59.5c-0.04,0-0.08,0-0.12,0C132.506,459.365,41.3,368.056,41.364,255.883c0.031-54.337,21.221-105.411,59.667-143.813c38.417-38.372,89.468-59.5,143.761-59.5c0.04,0,0.08,0,0.12,0c28.672,0.016,56.49,5.942,82.68,17.611c10.436,4.65,22.659-0.041,27.309-10.474c4.648-10.433-0.04-22.659-10.474-27.309c-31.516-14.043-64.989-21.173-99.492-21.192c-0.052,0-0.092,0-0.144,0c-65.329,0-126.767,25.428-172.993,71.6C25.536,129.014,0.038,190.473,0,255.861c-0.037,65.386,25.389,126.874,71.599,173.136c46.21,46.262,107.668,71.76,173.055,71.798c0.051,0,0.092,0,0.144,0c65.329,0,126.767-25.427,172.993-71.6c46.262-46.209,71.76-107.668,71.798-173.066v-20.842C489.589,223.864,480.33,214.604,468.907,214.604z"></path></g><g data-v-e31301d4=""><path data-v-e31301d4="" d="M505.942,39.803c-8.077-8.076-21.172-8.076-29.249,0L244.794,271.701l-52.609-52.609c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.077-8.077,21.172,0,29.249l67.234,67.234c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.586-2.019,14.625-6.058L505.942,69.052C514.019,60.975,514.019,47.88,505.942,39.803z"></path></g></svg>
+                                                <div class="sw-prev swiper-button-prev">
+                                                    <span class="icon"><i class="mdi mdi-chevron-left mdi-24px"></i></span>
                                                 </div>
-                                                <span>Далее</span>
+                                                <div class="sw-next swiper-button-next"><span class="icon">
+                                                    <i class="mdi mdi-chevron-right mdi-24px"></i></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="slide">
-                                <div class="quiz__questions">
-                                    <div class="quiz__questions-header">
-                                        <h3 class="quiz__title">
-                                            <svg data-v-34d1be05="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.141 16.597" class="quiz__title-icon"><g data-v-34d1be05="" id="check-form_1_" data-name="check-form (1)" transform="translate(-5.963)"><path data-v-34d1be05="" id="Path_12" d="M18.438 8.8V1.337H7.3V15.26h5.124a.668.668 0 0 1 0 1.337H6.631a.67.67 0 0 1-.668-.668V.668A.67.67 0 0 1 6.631 0h12.476a.67.67 0 0 1 .668.668V8.8a.668.668 0 1 1-1.337 0zm3.442 1.626a.67.67 0 0 0-.947.056l-3.665 4.077-1.838-1.771a.67.67 0 0 0-.925.969l2.339 2.25a.657.657 0 0 0 .468.189h.022a.668.668 0 0 0 .468-.223l4.121-4.589a.672.672 0 0 0-.043-.958zM15.988 3.9H9.973a.668.668 0 1 0 0 1.337h6.015a.668.668 0 1 0 0-1.337zm.668 4.344a.67.67 0 0 0-.668-.668H9.973a.668.668 0 0 0 0 1.337h6.015a.67.67 0 0 0 .668-.67zm-6.683 2.9a.668.668 0 0 0 0 1.337h1.782a.668.668 0 0 0 0-1.337z" data-name="Path 12" class="cls-1"></path></g></svg>
-                                            Ответьте на 5 вопросов и получите предложение о работе в интернете
-                                        </h3>
-                                        <hr class="quiz__title-separator">
-                                        <div class="title quiz__question-title">Вы ищете работу с вложением или без вложений?<br>
-                                            <div class="quiz__tags"></div>
-                                        </div>
-                                        <div class="progress-bar quiz__progress">
+                                <div class="quiz__buttons">
+                                    <div class="quiz-buttons">
+                                        <div class="progress-bar progress-bar_mobile">
                                             <div class="progress-bar__label">Готово:<span></span></div>
                                             <div class="progress-bar__field"><span></span></div>
                                         </div>
-                                    </div>
-                                    <div class="question quiz__question question_variants">
-                                        <div class="answer-variants">
-                                            <div class="answer-variants__group" id="variant_group_2">
-                                                <div class="answer-variants__textVariant" id="variant_2_0">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="С вложение" name="three" onclick="diss('.btn2', 'variant_group_2', 'variant_2_0')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
-                                                        <div class="answer">
-                                                            <div class="answer__title">С вложение</div>
-                                                        </div>
-                                                    </span>
-                                                    </label>
-                                                </div>
-                                                <div class="answer-variants__textVariant" id="variant_2_1">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="Без вложений" name="three" onclick="diss('.btn2', 'variant_group_2', 'variant_2_1')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
-                                                        <div class="answer">
-                                                            <div class="answer__title">Без вложений</div>
-                                                        </div>
-                                                    </span>
-                                                    </label>
-                                                </div>
+                                        <div class="button is-pulled-left is-link quiz-buttons__button quiz-buttons__button_prev"
+                                             onclick="prewSlide(2)" ;>
+                                            <div class="quiz-buttons__arrow">
+                                                <svg data-v-d80b7794="" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class="is-back"><path data-v-d80b7794="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <div class="quiz__buttons">
-                                        <div class="quiz-buttons">
-                                            <div class="progress-bar progress-bar_mobile">
-                                                <div class="progress-bar__label">Готово:<span></span></div>
-                                                <div class="progress-bar__field"><span></span></div>
+                                            <span class="quiz-buttons__button_prev_text">Назад</span></div>
+                                        <div class="button is-pulled-right quiz-buttons__button quiz-buttons__button_next btn2"
+                                             onclick="nextSlide(2)">
+                                            <div class="quiz-buttons__icon">
+                                                <svg data-v-e31301d4="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><g data-v-e31301d4=""><path data-v-e31301d4="" d="M468.907,214.604c-11.423,0-20.682,9.26-20.682,20.682v20.831c-0.031,54.338-21.221,105.412-59.666,143.812c-38.417,38.372-89.467,59.5-143.761,59.5c-0.04,0-0.08,0-0.12,0C132.506,459.365,41.3,368.056,41.364,255.883c0.031-54.337,21.221-105.411,59.667-143.813c38.417-38.372,89.468-59.5,143.761-59.5c0.04,0,0.08,0,0.12,0c28.672,0.016,56.49,5.942,82.68,17.611c10.436,4.65,22.659-0.041,27.309-10.474c4.648-10.433-0.04-22.659-10.474-27.309c-31.516-14.043-64.989-21.173-99.492-21.192c-0.052,0-0.092,0-0.144,0c-65.329,0-126.767,25.428-172.993,71.6C25.536,129.014,0.038,190.473,0,255.861c-0.037,65.386,25.389,126.874,71.599,173.136c46.21,46.262,107.668,71.76,173.055,71.798c0.051,0,0.092,0,0.144,0c65.329,0,126.767-25.427,172.993-71.6c46.262-46.209,71.76-107.668,71.798-173.066v-20.842C489.589,223.864,480.33,214.604,468.907,214.604z"></path></g><g data-v-e31301d4=""><path data-v-e31301d4="" d="M505.942,39.803c-8.077-8.076-21.172-8.076-29.249,0L244.794,271.701l-52.609-52.609c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.077-8.077,21.172,0,29.249l67.234,67.234c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.586-2.019,14.625-6.058L505.942,69.052C514.019,60.975,514.019,47.88,505.942,39.803z"></path></g></svg>
                                             </div>
-                                            <div class="button is-pulled-left is-link quiz-buttons__button quiz-buttons__button_prev" onclick="prewSlide(2)" ;>
-                                                <div class="quiz-buttons__arrow">
-                                                    <svg data-v-d80b7794="" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class="is-back"><path data-v-d80b7794="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
-                                                </div>
-                                                <span class="quiz-buttons__button_prev_text">Назад</span></div>
-                                            <div class="button is-pulled-right quiz-buttons__button quiz-buttons__button_next btn2" onclick="nextSlide(2)">
-                                                <div class="quiz-buttons__icon">
-                                                    <svg data-v-e31301d4="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><g data-v-e31301d4=""><path data-v-e31301d4="" d="M468.907,214.604c-11.423,0-20.682,9.26-20.682,20.682v20.831c-0.031,54.338-21.221,105.412-59.666,143.812c-38.417,38.372-89.467,59.5-143.761,59.5c-0.04,0-0.08,0-0.12,0C132.506,459.365,41.3,368.056,41.364,255.883c0.031-54.337,21.221-105.411,59.667-143.813c38.417-38.372,89.468-59.5,143.761-59.5c0.04,0,0.08,0,0.12,0c28.672,0.016,56.49,5.942,82.68,17.611c10.436,4.65,22.659-0.041,27.309-10.474c4.648-10.433-0.04-22.659-10.474-27.309c-31.516-14.043-64.989-21.173-99.492-21.192c-0.052,0-0.092,0-0.144,0c-65.329,0-126.767,25.428-172.993,71.6C25.536,129.014,0.038,190.473,0,255.861c-0.037,65.386,25.389,126.874,71.599,173.136c46.21,46.262,107.668,71.76,173.055,71.798c0.051,0,0.092,0,0.144,0c65.329,0,126.767-25.427,172.993-71.6c46.262-46.209,71.76-107.668,71.798-173.066v-20.842C489.589,223.864,480.33,214.604,468.907,214.604z"></path></g><g data-v-e31301d4=""><path data-v-e31301d4="" d="M505.942,39.803c-8.077-8.076-21.172-8.076-29.249,0L244.794,271.701l-52.609-52.609c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.077-8.077,21.172,0,29.249l67.234,67.234c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.586-2.019,14.625-6.058L505.942,69.052C514.019,60.975,514.019,47.88,505.942,39.803z"></path></g></svg>
-                                                </div>
-                                                <span>Далее</span>
-                                            </div>
+                                            <span>Далее</span>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="slide">
-                                <div class="quiz__questions">
-                                    <div class="quiz__questions-header">
-                                        <h3 class="quiz__title">
-                                            <svg data-v-34d1be05="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.141 16.597" class="quiz__title-icon"><g data-v-34d1be05="" id="check-form_1_" data-name="check-form (1)" transform="translate(-5.963)"><path data-v-34d1be05="" id="Path_12" d="M18.438 8.8V1.337H7.3V15.26h5.124a.668.668 0 0 1 0 1.337H6.631a.67.67 0 0 1-.668-.668V.668A.67.67 0 0 1 6.631 0h12.476a.67.67 0 0 1 .668.668V8.8a.668.668 0 1 1-1.337 0zm3.442 1.626a.67.67 0 0 0-.947.056l-3.665 4.077-1.838-1.771a.67.67 0 0 0-.925.969l2.339 2.25a.657.657 0 0 0 .468.189h.022a.668.668 0 0 0 .468-.223l4.121-4.589a.672.672 0 0 0-.043-.958zM15.988 3.9H9.973a.668.668 0 1 0 0 1.337h6.015a.668.668 0 1 0 0-1.337zm.668 4.344a.67.67 0 0 0-.668-.668H9.973a.668.668 0 0 0 0 1.337h6.015a.67.67 0 0 0 .668-.67zm-6.683 2.9a.668.668 0 0 0 0 1.337h1.782a.668.668 0 0 0 0-1.337z" data-name="Path 12" class="cls-1"></path></g></svg>
-                                            Ответьте на 5 вопросов и получите предложение о работе в интернете
-                                        </h3>
-                                        <hr class="quiz__title-separator">
-                                        <div class="title quiz__question-title">Есть ли опыт работы в интернете?<br>
-                                            <div class="quiz__tags"></div>
-                                        </div>
-                                        <div class="progress-bar quiz__progress">
-                                            <div class="progress-bar__label">Готово:<span></span></div>
-                                            <div class="progress-bar__field"><span></span></div>
-                                        </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="quiz__questions">
+                                <div class="quiz__questions-header">
+                                    <h3 class="quiz__title">
+                                        <svg data-v-34d1be05="" xmlns="http://www.w3.org/2000/svg"
+                                             viewBox="0 0 16.141 16.597" class="quiz__title-icon">
+                                            <g data-v-34d1be05="" id="check-form_1_" data-name="check-form (1)"
+                                               transform="translate(-5.963)">
+                                                <path data-v-34d1be05="" id="Path_12"
+                                                      d="M18.438 8.8V1.337H7.3V15.26h5.124a.668.668 0 0 1 0 1.337H6.631a.67.67 0 0 1-.668-.668V.668A.67.67 0 0 1 6.631 0h12.476a.67.67 0 0 1 .668.668V8.8a.668.668 0 1 1-1.337 0zm3.442 1.626a.67.67 0 0 0-.947.056l-3.665 4.077-1.838-1.771a.67.67 0 0 0-.925.969l2.339 2.25a.657.657 0 0 0 .468.189h.022a.668.668 0 0 0 .468-.223l4.121-4.589a.672.672 0 0 0-.043-.958zM15.988 3.9H9.973a.668.668 0 1 0 0 1.337h6.015a.668.668 0 1 0 0-1.337zm.668 4.344a.67.67 0 0 0-.668-.668H9.973a.668.668 0 0 0 0 1.337h6.015a.67.67 0 0 0 .668-.67zm-6.683 2.9a.668.668 0 0 0 0 1.337h1.782a.668.668 0 0 0 0-1.337z"
+                                                      data-name="Path 12" class="cls-1"></path>
+                                            </g>
+                                        </svg>
+                                        Ответьте на 5 вопросов и получите предложение о работе в интернете
+                                    </h3>
+                                    <hr class="quiz__title-separator">
+                                    <div class="title quiz__question-title">Есть ли опыт работы в интернете?<br>
+                                        <div class="quiz__tags"></div>
                                     </div>
-                                    <div class="question quiz__question question_variants">
-                                        <div class="answer-variants">
-                                            <div class="answer-variants__group" id="variant_group_3">
-                                                <div class="answer-variants__textVariant" id="variant_3_0">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="Нет" name="fourth" onclick="diss('.btn3', 'variant_group_3', 'variant_3_0')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
+                                    <div class="progress-bar quiz__progress">
+                                        <div class="progress-bar__label">Готово:<span></span></div>
+                                        <div class="progress-bar__field"><span></span></div>
+                                    </div>
+                                </div>
+                                <div class="question quiz__question question_variants">
+                                    <div class="answer-variants">
+                                        <div class="answer-variants__group" id="variant_group_3">
+                                            <div class="answer-variants__textVariant" id="variant_3_0">
+                                                <label tabindex="0" class="b-radio radio">
+                                                    <input type="radio" value="Нет" name="fourth"
+                                                           onclick="diss('.btn3', 'variant_group_3', 'variant_3_0')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
                                                         <div class="answer">
                                                             <div class="answer__title">Нет</div>
                                                         </div>
                                                     </span>
-                                                    </label>
-                                                </div>
-                                                <div class="answer-variants__textVariant" id="variant_3_1">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="Да" name="fourth" onclick="diss('.btn3', 'variant_group_3', 'variant_3_1')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
+                                                </label>
+                                            </div>
+                                            <div class="answer-variants__textVariant" id="variant_3_1">
+                                                <label tabindex="0" class="b-radio radio">
+                                                    <input type="radio" value="Да" name="fourth"
+                                                           onclick="diss('.btn3', 'variant_group_3', 'variant_3_1')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
                                                         <div class="answer">
                                                             <div class="answer__title">Да</div>
                                                         </div>
                                                     </span>
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="quiz__buttons">
-                                        <div class="quiz-buttons">
-                                            <div class="progress-bar progress-bar_mobile">
-                                                <div class="progress-bar__label">Готово:<span></span></div>
-                                                <div class="progress-bar__field"><span></span></div>
-                                            </div>
-                                            <div class="button is-pulled-left is-link quiz-buttons__button quiz-buttons__button_prev" onclick="prewSlide(3)" ;>
-                                                <div class="quiz-buttons__arrow">
-                                                    <svg data-v-d80b7794="" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class="is-back"><path data-v-d80b7794="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
-                                                </div>
-                                                <span class="quiz-buttons__button_prev_text">Назад</span></div>
-                                            <div class="button is-pulled-right quiz-buttons__button quiz-buttons__button_next btn3" onclick="nextSlide(3)">
-                                                <div class="quiz-buttons__icon">
-                                                    <svg data-v-e31301d4="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><g data-v-e31301d4=""><path data-v-e31301d4="" d="M468.907,214.604c-11.423,0-20.682,9.26-20.682,20.682v20.831c-0.031,54.338-21.221,105.412-59.666,143.812c-38.417,38.372-89.467,59.5-143.761,59.5c-0.04,0-0.08,0-0.12,0C132.506,459.365,41.3,368.056,41.364,255.883c0.031-54.337,21.221-105.411,59.667-143.813c38.417-38.372,89.468-59.5,143.761-59.5c0.04,0,0.08,0,0.12,0c28.672,0.016,56.49,5.942,82.68,17.611c10.436,4.65,22.659-0.041,27.309-10.474c4.648-10.433-0.04-22.659-10.474-27.309c-31.516-14.043-64.989-21.173-99.492-21.192c-0.052,0-0.092,0-0.144,0c-65.329,0-126.767,25.428-172.993,71.6C25.536,129.014,0.038,190.473,0,255.861c-0.037,65.386,25.389,126.874,71.599,173.136c46.21,46.262,107.668,71.76,173.055,71.798c0.051,0,0.092,0,0.144,0c65.329,0,126.767-25.427,172.993-71.6c46.262-46.209,71.76-107.668,71.798-173.066v-20.842C489.589,223.864,480.33,214.604,468.907,214.604z"></path></g><g data-v-e31301d4=""><path data-v-e31301d4="" d="M505.942,39.803c-8.077-8.076-21.172-8.076-29.249,0L244.794,271.701l-52.609-52.609c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.077-8.077,21.172,0,29.249l67.234,67.234c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.586-2.019,14.625-6.058L505.942,69.052C514.019,60.975,514.019,47.88,505.942,39.803z"></path></g></svg>
-                                                </div>
-                                                <span>Далее</span>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="slide">
-                                <div class="quiz__questions">
-                                    <div class="quiz__questions-header">
-                                        <h3 class="quiz__title">
-                                            <svg data-v-34d1be05="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.141 16.597" class="quiz__title-icon"><g data-v-34d1be05="" id="check-form_1_" data-name="check-form (1)" transform="translate(-5.963)"><path data-v-34d1be05="" id="Path_12" d="M18.438 8.8V1.337H7.3V15.26h5.124a.668.668 0 0 1 0 1.337H6.631a.67.67 0 0 1-.668-.668V.668A.67.67 0 0 1 6.631 0h12.476a.67.67 0 0 1 .668.668V8.8a.668.668 0 1 1-1.337 0zm3.442 1.626a.67.67 0 0 0-.947.056l-3.665 4.077-1.838-1.771a.67.67 0 0 0-.925.969l2.339 2.25a.657.657 0 0 0 .468.189h.022a.668.668 0 0 0 .468-.223l4.121-4.589a.672.672 0 0 0-.043-.958zM15.988 3.9H9.973a.668.668 0 1 0 0 1.337h6.015a.668.668 0 1 0 0-1.337zm.668 4.344a.67.67 0 0 0-.668-.668H9.973a.668.668 0 0 0 0 1.337h6.015a.67.67 0 0 0 .668-.67zm-6.683 2.9a.668.668 0 0 0 0 1.337h1.782a.668.668 0 0 0 0-1.337z" data-name="Path 12" class="cls-1"></path></g></svg>
-                                            Ответьте на 5 вопросов и получите предложение о работе в интернете
-                                        </h3>
-                                        <hr class="quiz__title-separator">
-                                        <div class="title quiz__question-title">Какой ваш возраст?<br>
-                                            <div class="quiz__tags"></div>
-                                        </div>
-                                        <div class="progress-bar quiz__progress">
+                                <div class="quiz__buttons">
+                                    <div class="quiz-buttons">
+                                        <div class="progress-bar progress-bar_mobile">
                                             <div class="progress-bar__label">Готово:<span></span></div>
                                             <div class="progress-bar__field"><span></span></div>
                                         </div>
+                                        <div class="button is-pulled-left is-link quiz-buttons__button quiz-buttons__button_prev"
+                                             onclick="prewSlide(3)" ;>
+                                            <div class="quiz-buttons__arrow">
+                                                <svg data-v-d80b7794="" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class="is-back"><path data-v-d80b7794="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
+                                            </div>
+                                            <span class="quiz-buttons__button_prev_text">Назад</span></div>
+                                        <div class="button is-pulled-right quiz-buttons__button quiz-buttons__button_next btn3"
+                                             onclick="nextSlide(3)">
+                                            <div class="quiz-buttons__icon">
+                                                <svg data-v-e31301d4="" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 512 512" xml:space="preserve"><g data-v-e31301d4=""><path data-v-e31301d4="" d="M468.907,214.604c-11.423,0-20.682,9.26-20.682,20.682v20.831c-0.031,54.338-21.221,105.412-59.666,143.812c-38.417,38.372-89.467,59.5-143.761,59.5c-0.04,0-0.08,0-0.12,0C132.506,459.365,41.3,368.056,41.364,255.883c0.031-54.337,21.221-105.411,59.667-143.813c38.417-38.372,89.468-59.5,143.761-59.5c0.04,0,0.08,0,0.12,0c28.672,0.016,56.49,5.942,82.68,17.611c10.436,4.65,22.659-0.041,27.309-10.474c4.648-10.433-0.04-22.659-10.474-27.309c-31.516-14.043-64.989-21.173-99.492-21.192c-0.052,0-0.092,0-0.144,0c-65.329,0-126.767,25.428-172.993,71.6C25.536,129.014,0.038,190.473,0,255.861c-0.037,65.386,25.389,126.874,71.599,173.136c46.21,46.262,107.668,71.76,173.055,71.798c0.051,0,0.092,0,0.144,0c65.329,0,126.767-25.427,172.993-71.6c46.262-46.209,71.76-107.668,71.798-173.066v-20.842C489.589,223.864,480.33,214.604,468.907,214.604z"></path></g><g data-v-e31301d4=""><path data-v-e31301d4="" d="M505.942,39.803c-8.077-8.076-21.172-8.076-29.249,0L244.794,271.701l-52.609-52.609c-8.076-8.077-21.172-8.077-29.248,0c-8.077,8.077-8.077,21.172,0,29.249l67.234,67.234c4.038,4.039,9.332,6.058,14.625,6.058c5.293,0,10.586-2.019,14.625-6.058L505.942,69.052C514.019,60.975,514.019,47.88,505.942,39.803z"></path></g></svg>
+                                            </div>
+                                            <span>Далее</span>
+                                        </div>
                                     </div>
-                                    <div class="question quiz__question question_variants">
-                                        <div class="answer-variants">
-                                            <div class="answer-variants__group" id="variant_group_4">
-                                                <div class="answer-variants__textVariant" id="variant_4_0">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="меньше 20 лет" name="fifth" onclick="diss('.btn4', 'variant_group_4', 'variant_4_0')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="quiz__questions">
+                                <div class="quiz__questions-header">
+                                    <h3 class="quiz__title">
+                                        <svg data-v-34d1be05="" xmlns="http://www.w3.org/2000/svg"
+                                             viewBox="0 0 16.141 16.597" class="quiz__title-icon">
+                                            <g data-v-34d1be05="" id="check-form_1_" data-name="check-form (1)"
+                                               transform="translate(-5.963)">
+                                                <path data-v-34d1be05="" id="Path_12"
+                                                      d="M18.438 8.8V1.337H7.3V15.26h5.124a.668.668 0 0 1 0 1.337H6.631a.67.67 0 0 1-.668-.668V.668A.67.67 0 0 1 6.631 0h12.476a.67.67 0 0 1 .668.668V8.8a.668.668 0 1 1-1.337 0zm3.442 1.626a.67.67 0 0 0-.947.056l-3.665 4.077-1.838-1.771a.67.67 0 0 0-.925.969l2.339 2.25a.657.657 0 0 0 .468.189h.022a.668.668 0 0 0 .468-.223l4.121-4.589a.672.672 0 0 0-.043-.958zM15.988 3.9H9.973a.668.668 0 1 0 0 1.337h6.015a.668.668 0 1 0 0-1.337zm.668 4.344a.67.67 0 0 0-.668-.668H9.973a.668.668 0 0 0 0 1.337h6.015a.67.67 0 0 0 .668-.67zm-6.683 2.9a.668.668 0 0 0 0 1.337h1.782a.668.668 0 0 0 0-1.337z"
+                                                      data-name="Path 12" class="cls-1"></path>
+                                            </g>
+                                        </svg>
+                                        Ответьте на 5 вопросов и получите предложение о работе в интернете
+                                    </h3>
+                                    <hr class="quiz__title-separator">
+                                    <div class="title quiz__question-title">Какой ваш возраст?<br>
+                                        <div class="quiz__tags"></div>
+                                    </div>
+                                    <div class="progress-bar quiz__progress">
+                                        <div class="progress-bar__label">Готово:<span></span></div>
+                                        <div class="progress-bar__field"><span></span></div>
+                                    </div>
+                                </div>
+                                <div class="question quiz__question question_variants">
+                                    <div class="answer-variants">
+                                        <div class="answer-variants__group" id="variant_group_4">
+                                            <div class="answer-variants__textVariant" id="variant_4_0">
+                                                <label tabindex="0" class="b-radio radio">
+                                                    <input type="radio" value="меньше 20 лет" name="fifth"
+                                                           onclick="diss('.btn4', 'variant_group_4', 'variant_4_0')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
                                                         <div class="answer">
                                                             <div class="answer__title">меньше 20 лет</div>
                                                         </div>
                                                     </span>
-                                                    </label>
-                                                </div>
-                                                <div class="answer-variants__textVariant" id="variant_4_1">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="20-30" name="fifth" onclick="diss('.btn4', 'variant_group_4', 'variant_4_1')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
+                                                </label>
+                                            </div>
+                                            <div class="answer-variants__textVariant" id="variant_4_1">
+                                                <label tabindex="0" class="b-radio radio">
+                                                    <input type="radio" value="20-30" name="fifth"
+                                                           onclick="diss('.btn4', 'variant_group_4', 'variant_4_1')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
                                                         <div class="answer"><div class="answer__title">20-30</div>
                                                         </div>
                                                     </span>
-                                                    </label>
-                                                </div>
-                                                <div class="answer-variants__textVariant" id="variant_4_2">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="30-40" name="fifth" onclick="diss('.btn4', 'variant_group_4', 'variant_4_2')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
+                                                </label>
+                                            </div>
+                                            <div class="answer-variants__textVariant" id="variant_4_2">
+                                                <label tabindex="0" class="b-radio radio">
+                                                    <input type="radio" value="30-40" name="fifth"
+                                                           onclick="diss('.btn4', 'variant_group_4', 'variant_4_2')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
                                                         <div class="answer">
                                                             <div class="answer__title">30-40</div>
                                                         </div>
                                                     </span>
-                                                    </label>
-                                                </div>
-                                                <div class="answer-variants__textVariant" id="variant_4_3">
-                                                    <label tabindex="0" class="b-radio radio">
-                                                        <input type="radio" value="больше 40" name="fifth" onclick="diss('.btn4', 'variant_group_4', 'variant_4_3')">
-                                                        <span class="check"></span>
-                                                        <span class="control-label">
+                                                </label>
+                                            </div>
+                                            <div class="answer-variants__textVariant" id="variant_4_3">
+                                                <label tabindex="0" class="b-radio radio">
+                                                    <input type="radio" value="больше 40" name="fifth"
+                                                           onclick="diss('.btn4', 'variant_group_4', 'variant_4_3')">
+                                                    <span class="check"></span>
+                                                    <span class="control-label">
                                                         <div class="answer">
                                                             <div class="answer__title">больше 40</div>
                                                         </div>
                                                     </span>
-                                                    </label>
-                                                </div>
+                                                </label>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="quiz__buttons">
-                                        <div class="quiz-buttons">
-                                            <div class="progress-bar progress-bar_mobile">
-                                                <div class="progress-bar__label">Готово:<span></span></div>
-                                                <div class="progress-bar__field"><span></span></div>
+                                </div>
+                                <div class="quiz__buttons">
+                                    <div class="quiz-buttons">
+                                        <div class="progress-bar progress-bar_mobile">
+                                            <div class="progress-bar__label">Готово:<span></span></div>
+                                            <div class="progress-bar__field"><span></span></div>
+                                        </div>
+                                        <div class="button is-pulled-left is-link quiz-buttons__button quiz-buttons__button_prev"
+                                             onclick="prewSlide(4);">
+                                            <div class="quiz-buttons__arrow">
+                                                <svg data-v-d80b7794="" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class="is-back"><path data-v-d80b7794="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
                                             </div>
-                                            <div class="button is-pulled-left is-link quiz-buttons__button quiz-buttons__button_prev" onclick="prewSlide(4);">
-                                                <div class="quiz-buttons__arrow">
-                                                    <svg data-v-d80b7794="" x="0px" y="0px" viewBox="0 0 31.49 31.49" xml:space="preserve" class="is-back"><path data-v-d80b7794="" d="M21.205,5.007c-0.429-0.444-1.143-0.444-1.587,0c-0.429,0.429-0.429,1.143,0,1.571l8.047,8.047H1.111C0.492,14.626,0,15.118,0,15.737c0,0.619,0.492,1.127,1.111,1.127h26.554l-8.047,8.032c-0.429,0.444-0.429,1.159,0,1.587c0.444,0.444,1.159,0.444,1.587,0l9.952-9.952c0.444-0.429,0.444-1.143,0-1.571L21.205,5.007z"></path></svg>
-                                                </div>
-                                                <span class="quiz-buttons__button_prev_text">Назад</span>
-                                            </div>
-                                            <div class="button button_color_theme is-pulled-right quiz-buttons__button quiz-buttons__button_next btn4" onclick="nextSlide(4)">
-                                                <span class="is-hidden-mobile">Последний шаг</span>
-                                                <span class="is-hidden-tablet">
-                                                <span class="icon"><i class="mdi mdi-checkbox-marked-circle-outline mdi-24px"></i></span>
+                                            <span class="quiz-buttons__button_prev_text">Назад</span>
+                                        </div>
+                                        <div class="button button_color_theme is-pulled-right quiz-buttons__button quiz-buttons__button_next btn4"
+                                             onclick="nextSlide(4)">
+                                            <span class="is-hidden-mobile">Последний шаг</span>
+                                            <span class="is-hidden-tablet">
+                                                <span class="icon"><i
+                                                        class="mdi mdi-checkbox-marked-circle-outline mdi-24px"></i></span>
                                                 <span>Далее</span>
                                             </span>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li class="slide">
-                                <div class="final-page">
-                                    <div class="final-page__contacts">
-                                        <div class="final-page__header" style="margin-bottom: 2rem;">
-                                            <span class="icon final-page__icon"><i class="mdi mdi-check-circle-outline mdi-24px"></i></span>
-                                            <p class="title final-page__title">Отлично. Последний шаг!</p></div>
-                                        <div>
-                                            <div class="columns">
-                                                <div class="column is-5 is-offset-3 is-6">
-                                                    <div class="lead-form__fields" style="">
-                                                        <div class="messengers">
-                                                            <div class="messengers__modal">
-                                                                <div class="messengers__modal-window">
-                                                                    <div class="messengers__modal-body">
-                                                                        <div class="messengers__label">Введите email</div>
-                                                                        <input placeholder="mail@mail.ru" class="messengers__input column" required="required" name="email1s">
-                                                                    </div>
+                            </div>
+                        </li>
+                        <li class="slide">
+                            <div class="final-page">
+                                <div class="final-page__contacts">
+                                    <div class="final-page__header" style="margin-bottom: 2rem;">
+                                        <span class="icon final-page__icon"><i
+                                                class="mdi mdi-check-circle-outline mdi-24px"></i></span>
+                                        <p class="title final-page__title">Отлично. Последний шаг!</p></div>
+                                    <div>
+                                        <div class="columns">
+                                            <div class="column is-5 is-offset-3 is-6">
+                                                <div class="lead-form__fields" style="">
+                                                    <div class="messengers">
+                                                        <div class="messengers__modal">
+                                                            <div class="messengers__modal-window">
+                                                                <div class="messengers__modal-body">
+                                                                    <div class="messengers__label">Введите email</div>
+                                                                    <input placeholder="mail@mail.ru"
+                                                                           class="messengers__input column"
+                                                                           required="required" name="email1s">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="lead-form__fields" style="">
-                                                        <div class="messengers">
-                                                            <div class="messengers__modal">
-                                                                <div class="messengers__modal-window">
-                                                                    <div class="messengers__modal-body">
-                                                                        <div class="messengers__label">Введите номер телефона</div>
-                                                                        <input placeholder="+79112223344" class="messengers__input column" required="required" name="telefon">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <button type="submit" class="lead-form__button button button_color_theme is-medium lead-form__button-messengers">
-                                                        <span class="icon"><i class="mdi mdi-checkbox-marked-circle-outline mdi-24px"></i></span><span>Получить предложение</span>
-                                                    </button>
                                                 </div>
+                                                <div class="lead-form__fields" style="">
+                                                    <div class="messengers">
+                                                        <div class="messengers__modal">
+                                                            <div class="messengers__modal-window">
+                                                                <div class="messengers__modal-body">
+                                                                    <div class="messengers__label">Введите номер
+                                                                        телефона
+                                                                    </div>
+                                                                    <input placeholder="+79112223344"
+                                                                           class="messengers__input column"
+                                                                           required="required" name="telefon">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button type="submit"
+                                                        class="lead-form__button button button_color_theme is-medium lead-form__button-messengers">
+                                                    <span class="icon"><i
+                                                            class="mdi mdi-checkbox-marked-circle-outline mdi-24px"></i></span><span>Получить предложение</span>
+                                                </button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
-                </form>
-            </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
 
-
-    <script src="js/jquery_3_3_1.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <!--<script src="js/bootstrap.min.js"></script>-->
-    <script src="js/script.js"></script>
+<script src="js/jquery_3_3_1.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<!--<script src="js/bootstrap.min.js"></script>-->
+<script src="js/script.js"></script>
 
 </body>
 </html>

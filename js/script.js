@@ -98,6 +98,11 @@ function diss(current, variantGroupId, variandId) {
             $(current).removeAttr("disabled");
         }
 
+        if (typeof $('#'+variandId).data('img') !== 'undefined'){
+            var src = $('#'+variandId).data('src');
+            $('#'+variantGroupId+' img').attr("src", src);
+        }
+
         //is not disabled
         $('#'+variantGroupId + ' .answer-variants__textVariant').each(function (el) {
             $(this).removeClass('answer-variants__textVariant_selected');
@@ -110,9 +115,54 @@ function diss(current, variantGroupId, variandId) {
 
 
 
-
 //open pop up
 $('.open-popup-link').magnificPopup({
     type:'inline',
     closeOnBgClick: false,
 });
+
+
+
+
+var mySwiper = new Swiper ('.sw-wrap', {
+    direction: 'horizontal',
+    observer: true,
+    observeParents: true,
+    loop: true,
+    slidesPerView: 5,
+    navigation: {
+        nextEl: '.sw-next',
+        prevEl: '.sw-prev',
+    },
+    scrollbar: {
+        el: '.sw-scroll',
+    },
+    breakpoints: {
+        // when window width is <= 320px
+        380: {
+            slidesPerView: 1
+
+        },
+        // when window width is <= 480px
+        500: {
+            slidesPerView: 2,
+
+        },
+        // when window width is <= 640px
+        700: {
+            slidesPerView: 3,
+
+        },
+        // when window width is <= 992
+        992: {
+            slidesPerView: 4,
+
+        },
+        // when window width is <= 1199
+        1199: {
+            slidesPerView: 5,
+        },
+    }
+});
+
+
