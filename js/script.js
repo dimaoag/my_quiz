@@ -1,7 +1,13 @@
 
+//hide finale page
+$('.final-page').hide();
+
+
+
+
+//insert percents in span and width
 var cournSlides = $('#slides .slide').length - 1;
 var currentCount = 0;
-
 $('.quiz__progress').each(function (el) {
     $(this).find('.progress-bar__label span').html(currentCount + '%');
     $(this).find('.progress-bar__field span').css('width',currentCount + '%');
@@ -14,8 +20,15 @@ $('.progress-bar_mobile').each(function (el) {
     currentCount += Math.round(100 / cournSlides);
 });
 
+
+
+
+//next slide
 function nextSlide(currentSlide2) {
     var slides2 = $('#slides .slide');
+    if (currentSlide2 == (slides2.length - 2)){
+        $('.final-page').show();
+    }
     var currentSlide = $('#slides').children().eq(currentSlide2);
     var buttonNext = currentSlide.find('.quiz-buttons__button_next');
     if(buttonNext.is('[disabled=disabled]')){
@@ -25,9 +38,12 @@ function nextSlide(currentSlide2) {
         var nextSlide = (currentSlide2 + 1) % slides2.length;
         $('#slides').children().eq(nextSlide).addClass("showing");
     }
-
 }
 
+
+
+
+//next prev slide
 function prewSlide(currentSlide2) {
     var slides2 = $('#slides .slide');
     var currentSlide = $('#slides').children().eq(currentSlide2);
@@ -36,6 +52,10 @@ function prewSlide(currentSlide2) {
     $('#slides').children().eq(prevSlide).addClass("showing");
 }
 
+
+
+
+//click on answer
 function diss(current, variantGroupId, variandId) {
     $(current).removeAttr("disabled");
 
@@ -46,3 +66,12 @@ function diss(current, variantGroupId, variandId) {
     $('#'+ variandId).addClass(" answer-variants__textVariant_selected");
 
 }
+
+
+
+
+//open pop up
+$('.open-popup-link').magnificPopup({
+    type:'inline',
+    closeOnBgClick: false,
+});
