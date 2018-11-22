@@ -57,13 +57,54 @@ function prewSlide(currentSlide2) {
 
 //click on answer
 function diss(current, variantGroupId, variandId) {
-    $(current).removeAttr("disabled");
 
-    $('#'+variantGroupId + ' .answer-variants__textVariant').each(function (el) {
-        $(this).removeClass('answer-variants__textVariant_selected');
-    });
 
-    $('#'+ variandId).addClass(" answer-variants__textVariant_selected");
+    //is checkbox
+    if ($('#'+variandId+' input').is(':checkbox')){
+
+
+        //is disabled
+        if (typeof $(current).data('disabled') !== 'undefined') {
+
+            if (!$('#'+variandId+' input').is(":checked")) {
+                $('#'+ variandId).removeClass('answer-variants__textVariant_selected');
+                $(current).attr('disabled', 'disabled');
+            } else {
+                $('#'+ variandId).addClass(" answer-variants__textVariant_selected");
+            }
+
+            $('#'+variantGroupId).find("input[type='checkbox']").each(function(){
+                if ($(this).is(":checked")){
+                    $(current).removeAttr("disabled");
+                }
+            });
+
+        //is not disabled
+        } else {
+
+            if (!$('#'+variandId+' input').is(":checked")) {
+                $('#'+ variandId).removeClass('answer-variants__textVariant_selected');
+            } else {
+                $('#'+ variandId).addClass(" answer-variants__textVariant_selected");
+            }
+
+        }
+
+    //is radio
+    } else {
+
+        //is disabled
+        if (typeof $(current).data('disabled') !== 'undefined') {
+            $(current).removeAttr("disabled");
+        }
+
+        //is not disabled
+        $('#'+variantGroupId + ' .answer-variants__textVariant').each(function (el) {
+            $(this).removeClass('answer-variants__textVariant_selected');
+        });
+        $('#'+ variandId).addClass(" answer-variants__textVariant_selected");
+    }
+
 
 }
 
