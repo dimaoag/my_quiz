@@ -67,10 +67,14 @@ function diss(current, variantGroupId, variandId) {
         if (typeof $(current).data('disabled') !== 'undefined') {
 
             if (!$('#'+variandId+' input').is(":checked")) {
-                $('#'+ variandId).removeClass('answer-variants__textVariant_selected');
+                if (typeof $('#'+variantGroupId).data('gallery') == 'undefined') {
+                    $('#'+ variandId).removeClass('answer-variants__textVariant_selected');
+                }
                 $(current).attr('disabled', 'disabled');
             } else {
-                $('#'+ variandId).addClass(" answer-variants__textVariant_selected");
+                if (typeof $('#'+variantGroupId).data('gallery') == 'undefined') {
+                    $('#'+ variandId).addClass(" answer-variants__textVariant_selected");
+                }
             }
 
             $('#'+variantGroupId).find("input[type='checkbox']").each(function(){
@@ -83,9 +87,14 @@ function diss(current, variantGroupId, variandId) {
         } else {
 
             if (!$('#'+variandId+' input').is(":checked")) {
-                $('#'+ variandId).removeClass('answer-variants__textVariant_selected');
+                if (typeof $('#'+variantGroupId).data('gallery') == 'undefined') {
+                    $('#'+ variandId).removeClass('answer-variants__textVariant_selected');
+                }
+
             } else {
-                $('#'+ variandId).addClass(" answer-variants__textVariant_selected");
+                if (typeof $('#'+variantGroupId).data('gallery') == 'undefined') {
+                    $('#'+ variandId).addClass(" answer-variants__textVariant_selected");
+                }
             }
 
         }
@@ -129,18 +138,60 @@ $('.open-popup-link').magnificPopup({
 
 
 
-
+// gallery radio
 var mySwiper = new Swiper ('.sw-wrap-radio', {
     direction: 'horizontal',
     observer: true,
     observeParents: true,
     slidesPerView: 5,
     navigation: {
-        nextEl: '.sw-next',
-        prevEl: '.sw-prev',
+        nextEl: '.sw-next-radio',
+        prevEl: '.sw-prev-radio',
     },
     scrollbar: {
-        el: '.sw-scroll',
+        el: '.sw-scroll-radio',
+    },
+    breakpoints: {
+        // when window width is <= 320px
+        380: {
+            slidesPerView: 1
+
+        },
+        // when window width is <= 480px
+        500: {
+            slidesPerView: 2,
+
+        },
+        // when window width is <= 640px
+        700: {
+            slidesPerView: 3,
+
+        },
+        // when window width is <= 992
+        992: {
+            slidesPerView: 4,
+
+        },
+        // when window width is <= 1199
+        1199: {
+            slidesPerView: 5,
+        },
+    }
+});
+
+
+// gallery checkbox
+var mySwiper = new Swiper ('.sw-wrap-checkbox', {
+    direction: 'horizontal',
+    observer: true,
+    observeParents: true,
+    slidesPerView: 5,
+    navigation: {
+        nextEl: '.sw-next-checkbox',
+        prevEl: '.sw-prev-checkbox',
+    },
+    scrollbar: {
+        el: '.sw-scroll-checkbox',
     },
     breakpoints: {
         // when window width is <= 320px
