@@ -103,11 +103,17 @@ function diss(current, variantGroupId, variandId) {
             $('#'+variantGroupId+' img').attr("src", src);
         }
 
-        //is not disabled
-        $('#'+variantGroupId + ' .answer-variants__textVariant').each(function (el) {
-            $(this).removeClass('answer-variants__textVariant_selected');
-        });
-        $('#'+ variandId).addClass(" answer-variants__textVariant_selected");
+        //is not disabled and is not gallery
+
+        if (typeof $('#'+variantGroupId).data('gallery') == 'undefined'){
+            $('#'+variantGroupId + ' .answer-variants__textVariant').each(function (el) {
+                $(this).removeClass('answer-variants__textVariant_selected');
+            });
+            $('#'+ variandId).addClass(" answer-variants__textVariant_selected");
+        }
+
+
+
     }
 
 
@@ -124,11 +130,10 @@ $('.open-popup-link').magnificPopup({
 
 
 
-var mySwiper = new Swiper ('.sw-wrap', {
+var mySwiper = new Swiper ('.sw-wrap-radio', {
     direction: 'horizontal',
     observer: true,
     observeParents: true,
-    loop: true,
     slidesPerView: 5,
     navigation: {
         nextEl: '.sw-next',
