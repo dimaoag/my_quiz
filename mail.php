@@ -1,7 +1,8 @@
 <?php
 
 $project_name = "My site";
-$admin_email = "dimaoag@gmail.com";
+//$admin_email = "dimaoag@gmail.com";
+$admin_email = "iceberg.vn.ua@gmail.com";
 $form_subject = "Заявка с сайта site.com";
 
 
@@ -79,8 +80,8 @@ foreach ($questions as $key_q => $value_q){
 
 
 
-// if (mail($admin_email, adopt($form_subject), $out, $headers)){
-//     header("Location: " .$_SERVER['HTTP_ORIGIN'] . "?status=1");
-// } else {
-//     echo 'Error!';
-// }
+ if (mail($admin_email, adopt($form_subject), $out, $headers)){
+     header("Location: " .$_SERVER['HTTP_ORIGIN'] . "?status=1");
+ } else {
+     echo 'Error!';
+ }
